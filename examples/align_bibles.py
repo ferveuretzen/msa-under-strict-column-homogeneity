@@ -38,13 +38,13 @@ def main():
 
                     sequence2 += re.findall(r"\w+|[^\w\s]", line)[1:]  # separate special characters and sentence number
 
-            lower_sequence1 = [word.lower() for word in sequence1]
-            lower_sequence2 = [word.lower() for word in sequence2]
+            def compare_in_casefold(x, y):
+                return x.casefold() == y.casefold()
 
-            merged_bible = align2merge(lower_sequence1, lower_sequence2)
+            merged_bible = align2merge(sequence1, sequence2, compfunc=compare_in_casefold)
 
-            aligned_bible1 = merged2aligned(merged_bible, lower_sequence1, "")
-            aligned_bible2 = merged2aligned(merged_bible, lower_sequence2, "")
+            aligned_bible1 = merged2aligned(merged_bible, sequence1, "", compfunc=compare_in_casefold)
+            aligned_bible2 = merged2aligned(merged_bible, sequence2, "", compfunc=compare_in_casefold)
 
             for j, merged_word in enumerate(merged_bible):
                 if aligned_bible1[j] == "":
