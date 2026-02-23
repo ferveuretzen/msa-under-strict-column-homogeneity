@@ -13,4 +13,7 @@ Thumbs.db
 
 *.egg-info/
 
+.pytest_cache/
+pytest-cache-files-*/
+
 /data/
