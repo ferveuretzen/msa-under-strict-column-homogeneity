@@ -1,0 +1,246 @@
+Depth ResNet50          Wide ResNet50     ResNet101        
+[  0] Conv2d            Conv2d            Conv2d           
+[  1] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[  2] ReLU              ReLU              ReLU             
+[  3] MaxPool2d         MaxPool2d         MaxPool2d        
+[  4] Conv2d            Conv2d            Conv2d           
+[  5] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[  6] Conv2d            Conv2d            Conv2d           
+[  7] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[  8] Conv2d            Conv2d            Conv2d           
+[  9] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 10] ReLU              ReLU              ReLU             
+[ 11] Conv2d            Conv2d            Conv2d           
+[ 12] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 13] Conv2d            Conv2d            Conv2d           
+[ 14] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 15] Conv2d            Conv2d            Conv2d           
+[ 16] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 17] Conv2d            Conv2d            Conv2d           
+[ 18] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 19] ReLU              ReLU              ReLU             
+[ 20] Conv2d            Conv2d            Conv2d           
+[ 21] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 22] Conv2d            Conv2d            Conv2d           
+[ 23] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 24] Conv2d            Conv2d            Conv2d           
+[ 25] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 26] ReLU              ReLU              ReLU             
+[ 27] Conv2d            Conv2d            Conv2d           
+[ 28] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 29] Conv2d            Conv2d            Conv2d           
+[ 30] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 31] Conv2d            Conv2d            Conv2d           
+[ 32] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 33] ReLU              ReLU              ReLU             
+[ 34] Conv2d            Conv2d            Conv2d           
+[ 35] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 36] Conv2d            Conv2d            Conv2d           
+[ 37] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 38] Conv2d            Conv2d            Conv2d           
+[ 39] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 40] Conv2d            Conv2d            Conv2d           
+[ 41] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 42] ReLU              ReLU              ReLU             
+[ 43] Conv2d            Conv2d            Conv2d           
+[ 44] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 45] Conv2d            Conv2d            Conv2d           
+[ 46] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 47] Conv2d            Conv2d            Conv2d           
+[ 48] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 49] ReLU              ReLU              ReLU             
+[ 50] Conv2d            Conv2d            Conv2d           
+[ 51] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 52] Conv2d            Conv2d            Conv2d           
+[ 53] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 54] Conv2d            Conv2d            Conv2d           
+[ 55] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 56] ReLU              ReLU              ReLU             
+[ 57] Conv2d            Conv2d            Conv2d           
+[ 58] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 59] Conv2d            Conv2d            Conv2d           
+[ 60] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 61] Conv2d            Conv2d            Conv2d           
+[ 62] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 63] ReLU              ReLU              ReLU             
+[ 64] Conv2d            Conv2d            Conv2d           
+[ 65] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 66] Conv2d            Conv2d            Conv2d           
+[ 67] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 68] Conv2d            Conv2d            Conv2d           
+[ 69] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 70] Conv2d            Conv2d            Conv2d           
+[ 71] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 72] ReLU              ReLU              ReLU             
+[ 73] Conv2d            Conv2d            Conv2d           
+[ 74] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 75] Conv2d            Conv2d            Conv2d           
+[ 76] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 77] Conv2d            Conv2d            Conv2d           
+[ 78] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 79] ReLU              ReLU              ReLU             
+[ 80] Conv2d            Conv2d            Conv2d           
+[ 81] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 82] Conv2d            Conv2d            Conv2d           
+[ 83] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 84] Conv2d            Conv2d            Conv2d           
+[ 85] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 86] ReLU              ReLU              ReLU             
+[ 87] Conv2d            Conv2d            Conv2d           
+[ 88] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 89] Conv2d            Conv2d            Conv2d           
+[ 90] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 91] Conv2d            Conv2d            Conv2d           
+[ 92] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 93] ReLU              ReLU              ReLU             
+[ 94] Conv2d            Conv2d            Conv2d           
+[ 95] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 96] Conv2d            Conv2d            Conv2d           
+[ 97] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[ 98] Conv2d            Conv2d            Conv2d           
+[ 99] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[100] ReLU              ReLU              ReLU             
+[101] Conv2d            Conv2d            Conv2d           
+[102] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[103] Conv2d            Conv2d            Conv2d           
+[104] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[105] Conv2d            Conv2d            Conv2d           
+[106] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[107] ReLU              ReLU              ReLU             
+[108] Conv2d            Conv2d            Conv2d           
+[109] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[110] Conv2d            Conv2d            Conv2d           
+[111] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[112] Conv2d            Conv2d            Conv2d           
+[113] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[114]                                     ReLU             
+[115] Conv2d            Conv2d            Conv2d           
+[116] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[117]                                     Conv2d           
+[118]                                     BatchNorm2d      
+[119]                                     Conv2d           
+[120]                                     BatchNorm2d      
+[121] ReLU              ReLU              ReLU             
+[122] Conv2d            Conv2d            Conv2d           
+[123] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[124] Conv2d            Conv2d            Conv2d           
+[125] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[126] Conv2d            Conv2d            Conv2d           
+[127] BatchNorm2d       BatchNorm2d       BatchNorm2d      
+[128] ReLU              ReLU              ReLU             
+[129]                                     Conv2d           
+[130]                                     BatchNorm2d      
+[131]                                     Conv2d           
+[132]                                     BatchNorm2d      
+[133]                                     Conv2d           
+[134]                                     BatchNorm2d      
+[135]                                     ReLU             
+[136]                                     Conv2d           
+[137]                                     BatchNorm2d      
+[138]                                     Conv2d           
+[139]                                     BatchNorm2d      
+[140]                                     Conv2d           
+[141]                                     BatchNorm2d      
+[142]                                     ReLU             
+[143]                                     Conv2d           
+[144]                                     BatchNorm2d      
+[145]                                     Conv2d           
+[146]                                     BatchNorm2d      
+[147]                                     Conv2d           
+[148]                                     BatchNorm2d      
+[149]                                     ReLU             
+[150]                                     Conv2d           
+[151]                                     BatchNorm2d      
+[152]                                     Conv2d           
+[153]                                     BatchNorm2d      
+[154]                                     Conv2d           
+[155]                                     BatchNorm2d      
+[156]                                     ReLU             
+[157]                                     Conv2d           
+[158]                                     BatchNorm2d      
+[159]                                     Conv2d           
+[160]                                     BatchNorm2d      
+[161]                                     Conv2d           
+[162]                                     BatchNorm2d      
+[163]                                     ReLU             
+[164]                                     Conv2d           
+[165]                                     BatchNorm2d      
+[166]                                     Conv2d           
+[167]                                     BatchNorm2d      
+[168]                                     Conv2d           
+[169]                                     BatchNorm2d      
+[170]                                     ReLU             
+[171]                                     Conv2d           
+[172]                                     BatchNorm2d      
+[173]                                     Conv2d           
+[174]                                     BatchNorm2d      
+[175]                                     Conv2d           
+[176]                                     BatchNorm2d      
+[177]                                     ReLU             
+[178]                                     Conv2d           
+[179]                                     BatchNorm2d      
+[180]                                     Conv2d           
+[181]                                     BatchNorm2d      
+[182]                                     Conv2d           
+[183]                                     BatchNorm2d      
+[184]                                     ReLU             
+[185]                                     Conv2d           
+[186]                                     BatchNorm2d      
+[187]                                     Conv2d           
+[188]                                     BatchNorm2d      
+[189]                                     Conv2d           
+[190]                                     BatchNorm2d      
+[191]                                     ReLU             
+[192]                                     Conv2d           
+[193]                                     BatchNorm2d      
+[194]                                     Conv2d           
+[195]                                     BatchNorm2d      
+[196]                                     Conv2d           
+[197]                                     BatchNorm2d      
+[198]                                     ReLU             
+[199]                                     Conv2d           
+[200]                                     BatchNorm2d      
+[201]                                     Conv2d           
+[202]                                     BatchNorm2d      
+[203]                                     Conv2d           
+[204]                                     BatchNorm2d      
+[205]                                     ReLU             
+[206]                                     Conv2d           
+[207]                                     BatchNorm2d      
+[208]                                     Conv2d           
+[209]                                     BatchNorm2d      
+[210]                                     Conv2d           
+[211]                                     BatchNorm2d      
+[212]                                     ReLU             
+[213]                                     Conv2d           
+[214]                                     BatchNorm2d      
+[215]                                     Conv2d           
+[216]                                     BatchNorm2d      
+[217]                                     Conv2d           
+[218]                                     BatchNorm2d      
+[219]                                     ReLU             
+[220]                                     Conv2d           
+[221]                                     BatchNorm2d      
+[222]                                     Conv2d           
+[223]                                     BatchNorm2d      
+[224]                                     Conv2d           
+[225]                                     BatchNorm2d      
+[226]                                     ReLU             
+[227]                                     Conv2d           
+[228]                                     BatchNorm2d      
+[229]                                     Conv2d           
+[230]                                     BatchNorm2d      
+[231]                                     Conv2d           
+[232]                                     BatchNorm2d      
+[233]                                     Conv2d           
+[234]                                     BatchNorm2d      
+[235]                                     ReLU             
+[236]                                     Conv2d           
+[237]                                     BatchNorm2d      
+[238]                                     Conv2d           
+[239]                                     BatchNorm2d      
+[240]                                     Conv2d           
+[241]                                     BatchNorm2d      
+[242]                                     ReLU             
+[243] AdaptiveAvgPool2d AdaptiveAvgPool2d AdaptiveAvgPool2d
+[244] Linear            Linear            Linear           
