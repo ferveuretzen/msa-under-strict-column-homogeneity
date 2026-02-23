@@ -5,14 +5,19 @@ from pydantic import validate_call
 
 
 @validate_call
-def align2merge(sequence1: list, sequence2: list) -> list:
+def align2merge(sequence1: list, sequence2: list, compfunc=None) -> list:
     n_seq1 = len(sequence1)
     n_seq2 = len(sequence2)
 
     # make dp table
 
+    if compfunc is None:
+        dp_match = np.equal.outer(sequence1, sequence2)
+    else:
+        userfunc = np.frompyfunc(compfunc, 2, 1)
+        dp_match = userfunc.outer(sequence1, sequence2).astype(bool)
+
     dp_table = np.zeros((n_seq1 + 1, n_seq2 + 1), dtype=np.int32)
-    dp_match = np.equal.outer(sequence1, sequence2)
 
     for x, y in itertools.product(range(n_seq1), range(n_seq2)):
         if dp_match[x, y]:
@@ -68,19 +73,30 @@ def align2merge(sequence1: list, sequence2: list) -> list:
 
 
 @validate_call
-def merged2aligned(merged_sequence: list, original_sequence: list, gap_charactor) -> list:
+def merged2aligned(merged_sequence: list, original_sequence: list, gap_filler, compfunc=None) -> list:
     aligned_seq = []
 
     p, n_seq = 0, len(original_sequence)
 
-    for mseq in merged_sequence:
-        if p < n_seq:
-            if original_sequence[p] == mseq:
-                aligned_seq.append(mseq)
-                p += 1
+    if compfunc is None:
+        for mseq in merged_sequence:
+            if p < n_seq:
+                if original_sequence[p] == mseq:
+                    aligned_seq.append(original_sequence[p])
+                    p += 1
+                else:
+                    aligned_seq.append(gap_filler)
             else:
-                aligned_seq.append(gap_charactor)
-        else:
-            break
+                break
+    else:
+        for mseq in merged_sequence:
+            if p < n_seq:
+                if compfunc(original_sequence[p], mseq):
+                    aligned_seq.append(original_sequence[p])
+                    p += 1
+                else:
+                    aligned_seq.append(gap_filler)
+            else:
+                break
 
     return aligned_seq
