@@ -37,7 +37,7 @@ You can inject custom comparison logic using the `compfunc` parameter, similar t
 - **Attribute-based:** Compare Neural Network layers by their parameters (e.g., `out_channels`).
 
 ### 3. Numpy-Powered Matrix Computation
-To ensure performance even with deep models like ResNet-101 (200+ layers), the tool leverages **NumPy's vectorization**:
+To ensure performance even with deep models like ResNet variants (100+ layers), the tool leverages **NumPy's vectorization**:
 - It uses `np.frompyfunc` to lift your custom `compfunc` into a NumPy universal function (ufunc).
 - High-speed outer product operations generate the alignment matrix efficiently.
 

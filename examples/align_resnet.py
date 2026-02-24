@@ -18,9 +18,9 @@ def compare_parameters(module1, module2):
 def main():
     modules1 = layers2list(models.resnet50(weights=None))
     modules2 = layers2list(models.wide_resnet50_2(weights=None))
-    modules3 = layers2list(models.resnet101(weights=None))
+    modules3 = layers2list(models.resnext50_32x4d(weights=None))
 
-    # align by module name, with ResNet50, Wide ResNet50, and ResNet101
+    # align by module name, with ResNet50, Wide ResNet50, and ResNetXt
 
     custom_align2merge = partial(align2merge, compfunc=compare_names)
 
@@ -42,7 +42,7 @@ def main():
     OUT_PATH = "examples/aligned_resnet_by_name.out"
 
     with open(OUT_PATH, "w") as fp:
-        print("Depth".ljust(depth + len("[]")), "ResNet50".ljust(width), "Wide ResNet50".ljust(width), "ResNet101".ljust(width), file=fp)
+        print("Depth".ljust(depth + len("[]")), "ResNet50".ljust(width), "Wide ResNet50".ljust(width), "ResNetXt".ljust(width), file=fp)
 
         for j in range(len(merged_layers)):
             print(
@@ -53,7 +53,7 @@ def main():
                 file=fp,
             )
 
-    # align by module name and parameters, with ResNet50, ResNet101, and Wide ResNet50
+    # align by module name and parameters, with ResNet50, Wide ResNet50, and ResNetXt
 
     custom_align2merge = partial(align2merge, compfunc=compare_parameters)
 
@@ -75,14 +75,14 @@ def main():
     OUT_PATH = "examples/aligned_resnet_by_parameters.out"
 
     with open(OUT_PATH, "w") as fp:
-        print("Depth".ljust(depth + len("[]")), "ResNet50".ljust(width), "ResNet101".ljust(width), "Wide ResNet50".ljust(width), file=fp)
+        print("Depth".ljust(depth + len("[]")), "ResNet50".ljust(width), "Wide ResNet50".ljust(width), "ResNetXt".ljust(width), file=fp)
 
         for j in range(len(merged_layers)):
             print(
                 f"[{str(j).rjust(depth)}]",
                 aligned_strings1[j].ljust(width),
-                aligned_strings3[j].ljust(width),
                 aligned_strings2[j].ljust(width),
+                aligned_strings3[j].ljust(width),
                 file=fp,
             )
 
