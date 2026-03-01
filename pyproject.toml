@@ -9,6 +9,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "msa-under-strict-column-homogeneity"
 version = "0.1.0"
+description = "Multi-sequence alignment under strict column homogeneity"
+requires-python = ">=3.9"
+readme = "README.md"
 dependencies = [
     "pydantic",
     "numpy",
