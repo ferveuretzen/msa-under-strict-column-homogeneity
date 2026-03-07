@@ -41,6 +41,14 @@ To ensure performance even with deep models like ResNet variants (100+ layers), 
 - It uses `np.frompyfunc` to lift your custom `compfunc` into a NumPy universal function (ufunc).
 - High-speed outer product operations generate the alignment matrix efficiently.
 
+## Installation
+
+To install this library directly from GitHub, run:
+
+```bash
+pip install git+https://github.com/ferveuretzen/msa-under-strict-column-homogeneity
+```
+
 ## Benchmarking with Various Datasets
 
 This tool is agnostic to the input data type. You can test it with:
