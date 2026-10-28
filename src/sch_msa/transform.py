@@ -12,6 +12,17 @@ def align2merge(sequence1: list, sequence2: list, compfunc=None) -> list:
     # make dp table
 
     if compfunc is None:
+        if sequence1 is None or sequence1 == []:
+            if sequence2 is None:
+                return []
+            else:
+                return sequence2
+        if sequence2 is None or sequence2 == []:
+            if sequence1 is None:
+                return []
+            else:
+                return sequence1
+
         dp_match = np.equal.outer(sequence1, sequence2)
     else:
         userfunc = np.frompyfunc(compfunc, 2, 1)
