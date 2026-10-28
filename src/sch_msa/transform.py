@@ -5,24 +5,14 @@ from pydantic import validate_call
 
 
 @validate_call
-def align2merge(sequence1: list, sequence2: list, compfunc=None) -> list:
+def align2merge(sequence1: list, sequence2: list, compfunc=None, mergefunc=None) -> list:
+    # mergefunc(element1, element2) chooses the merged element for each matched column (default: element1)
     n_seq1 = len(sequence1)
     n_seq2 = len(sequence2)
 
     # make dp table
 
     if compfunc is None:
-        if sequence1 is None or sequence1 == []:
-            if sequence2 is None:
-                return []
-            else:
-                return sequence2
-        if sequence2 is None or sequence2 == []:
-            if sequence1 is None:
-                return []
-            else:
-                return sequence1
-
         dp_match = np.equal.outer(sequence1, sequence2)
     else:
         userfunc = np.frompyfunc(compfunc, 2, 1)
@@ -46,7 +36,10 @@ def align2merge(sequence1: list, sequence2: list, compfunc=None) -> list:
 
     while x > 0 and y > 0:
         if dp_match[x - 1, y - 1]:
-            seq1.append(sequence1[x - 1])
+            if mergefunc is None:
+                seq1.append(sequence1[x - 1])
+            else:
+                seq1.append(mergefunc(sequence1[x - 1], sequence2[y - 1]))
             seq2.append(sequence2[y - 1])
             x -= 1
             y -= 1
